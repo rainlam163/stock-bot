@@ -1,0 +1,26 @@
+{
+  "name": "stock-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start:server": "node src/server.js",
+    "dev": "cd client && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@hono/node-server": "^1.19.7",
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
+    "hono": "^4.11.1",
+    "marked": "^17.0.1",
+    "node-cron": "^4.2.1",
+    "openai": "^6.15.0",
+    "technicalindicators": "^3.1.0"
+  }
+}
