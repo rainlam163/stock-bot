@@ -7,7 +7,7 @@ const results = ref([]);
 const loading = ref(false);
 const error = ref('');
 
-const API_URL = 'http://localhost:3000/analyze';
+const API_URL = '/api/analyze';
 
 const startAnalysis = async () => {
   // Reset state

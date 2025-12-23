@@ -2,7 +2,7 @@ require('dotenv').config();
 const { Hono } = require('hono');
 const { cors } = require('hono/cors');
 const { serve } = require('@hono/node-server');
-const { getMarketContext, analyzeStock } = require('./analyzer');
+const { getMarketContext, analyzeStock } = require('../core/analyzer');
 
 const app = new Hono();
 
@@ -13,7 +13,7 @@ app.use('/*', cors());
 app.get('/', (c) => c.text('Stock-Bot API is running!'));
 
 // 批量分析接口
-app.post('/analyze', async (c) => {
+app.post('/api/analyze', async (c) => {
     const body = await c.req.json();
     const codes = body.codes;
 
